@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reversTimer {
+  margin: 2rem auto;
+  background: linear-gradient(to right, #0c4447, #071f1f);
+  border-radius: 1rem;
+  color: aquamarine;
+  font-family: vazir;
+  font-size: 2rem;
+  text-shadow: 0 0 0.4rem black;
+  text-align: center;
+  padding: 2rem 0;
+}
+.reversTimer h3 {
+  font-size: 2.3rem;
+  margin-bottom: 1rem;
+}
+.reversTimer .containerTime {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reversTimer .containerTime .boxTime {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 1rem;
+}
+.reversTimer .containerTime .boxTime h4 {
+  font-family: Impact;
+  color: aqua;
+  text-shadow: 0 0 0.5rem black, 0 0 2rem aqua;
+  font-size: 4rem;
+}
+@media only screen and (max-width: 700px) {
+  .reversTimer {
+    width: 23rem;
+    font-size: 1.2rem;
+  }
+  .reversTimer h3 {
+    font-size: 1.7rem;
+  }
+  .reversTimer .containerTime .boxTime h4 {
+    font-size: 2.2rem;
+  }
+}

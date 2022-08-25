@@ -1,0 +1,64 @@
+.Header {
+  width: 100%;
+  height: 8rem;
+  background-image: url("../../assets/img/jamesWebb.png");
+  filter: hue-rotate(500deg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Header h2 {
+  color: white;
+  font-weight: bolder;
+  text-shadow: 0.1rem 0.1rem 0.1rem black, 0.1rem 0.1rem 0.2rem black,
+    0.1rem 0.1rem 0.3rem black, 0.1rem 0.1rem 0.6rem black,
+    0.1rem 0.1rem 0.5rem black;
+}
+.taskContainer {
+  width: 28rem;
+  height: 38rem !important;
+  margin: 2rem auto;
+  background: #284c86;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+@media screen and (max-width: 700px) {
+  .taskContainer {
+    width: 23rem;
+  }
+}
+.insideTaskContainer {
+  margin: 2rem auto;
+  width: 95%;
+  height: 60%;
+  overflow-y: auto !important;
+  padding-right: 1rem;
+}
+::placeholder {
+  font-family: vazir;
+  color: white;
+}
+input,
+button {
+  color: white;
+  background: transparent;
+  font-size: 1.2rem;
+  font-family: vazir;
+}
+button {
+  cursor: pointer;
+}
+input[type="checkbox"] {
+  cursor: pointer;
+}
+.check {
+  color: lightgreen !important;
+  text-decoration: line-through;
+}
+
+hr {
+  margin: 1rem 0;
+  border-bottom: 1px solid rgb(202, 240, 255);
+}

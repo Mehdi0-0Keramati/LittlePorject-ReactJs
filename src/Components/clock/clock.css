@@ -1,0 +1,311 @@
+.container {
+  margin: 2rem auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  padding-bottom: 2rem;
+}
+.container::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 99%;
+  height: 50%;
+  top: 50%;
+  left: 0.2rem;
+  background-color: #16132c;
+}
+.container_clock {
+  margin-top: 2rem;
+  width: 30rem;
+  height: 30rem;
+  position: relative;
+  border-radius: 50%;
+  background-color: #16132c;
+  position: relative;
+  border: 0.3rem solid white;
+  color: white;
+  box-shadow: inset 0.4rem 0.3rem 1rem 1px rgb(6, 24, 78),
+    0.2rem 0.2rem 0.3rem rgb(6, 27, 89);
+}
+
+.container_clock::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: black;
+  z-index: 11;
+  transform: translate(-50%, -50%);
+}
+
+.number {
+  text-align: center;
+  --rotation: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(var(--rotation));
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+.container_clock .number1 {
+  --rotation: 30deg;
+}
+
+.container_clock .number2 {
+  --rotation: 60deg;
+}
+
+.container_clock .number3 {
+  --rotation: 90deg;
+}
+
+.container_clock .number3::after {
+  content: "3";
+  position: absolute;
+  transform: rotate(-90deg) translateY(2rem);
+  padding-bottom: 1.6rem;
+}
+
+.container_clock .number4 {
+  --rotation: 120deg;
+}
+
+.container_clock .number5 {
+  --rotation: 150deg;
+}
+
+.container_clock .number6 {
+  --rotation: 180deg;
+}
+
+.container_clock .number6::after {
+  content: "6";
+  position: absolute;
+  transform: translateX(-50%) rotate(-180deg);
+  left: 50%;
+}
+
+.container_clock .number7 {
+  --rotation: 210deg;
+}
+
+.container_clock .number8 {
+  --rotation: 240deg;
+}
+
+.container_clock .number9 {
+  --rotation: 270deg;
+}
+
+.container_clock .number9::after {
+  content: "9";
+  position: absolute;
+  transform: rotate(-270deg) translateY(-1.6rem);
+  padding-top: 1.6rem;
+}
+
+.container_clock .number10 {
+  --rotation: 300deg;
+}
+
+.container_clock .number11 {
+  --rotation: 330deg;
+}
+
+.container_clock .number12 {
+  --rotation: 0deg;
+}
+
+.container_clock .number12::after {
+  content: "12";
+}
+
+.hand {
+  --rotation: 0;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  width: 0.3rem;
+  height: 13.5%;
+  background: orangered;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border: 1px solid white;
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+  transform-origin: bottom;
+  z-index: 10;
+}
+
+.hand::after {
+  content: "";
+  position: absolute;
+  left: -0.2rem;
+  top: -1rem;
+  width: 10px;
+  height: 10px;
+  background: orange;
+  border-radius: 50%;
+  box-shadow: 0 0 1rem 0.3rem darkorange, 0 0 2rem darkorange,
+    0 0 3rem darkorange;
+}
+
+.hand.hand-minute {
+  width: 0.1rem;
+  height: 20%;
+  background-color: teal;
+  z-index: 3;
+}
+
+.hand.hand-minute::after {
+  content: "";
+  position: absolute;
+  left: -0.3rem;
+  top: -1.9rem;
+  width: 10px;
+  height: 10px;
+  background: lightseagreen;
+  border-radius: 50%;
+  box-shadow: 0 0 1rem lightgreen;
+}
+
+.hand.hand-second {
+  width: 0.2rem;
+  height: 28%;
+  background-color: darkred;
+}
+
+.hand.hand-second::after {
+  content: "";
+  position: absolute;
+  left: -0.2rem;
+  top: -2rem;
+  width: 10px;
+  height: 10px;
+  background: red;
+  border-radius: 50%;
+  box-shadow: 0 0 1rem 0.3rem darkred, 0 0 2rem darkred, 0 0 3rem darkred;
+}
+
+.overClock {
+  margin-top: 1rem;
+  font-size: 3rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bolder;
+  filter: drop-shadow(0.3rem 0.2rem 0.2rem darkred);
+  background: linear-gradient(
+    to right,
+    skyblue 0%,
+    skyblue 70%,
+    tomato 70%,
+    tomato 100%
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.overClock::after {
+  content: "";
+  position: absolute;
+  left: -1rem;
+  top: 0;
+  width: 120%;
+  height: 100%;
+  background-color: rgba(114, 114, 189, 0.355);
+  border: 1px solid white;
+  border-radius: 2rem;
+}
+
+.circle {
+  position: absolute;
+  top: 16%;
+  left: 16%;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  border: 2px solid rgba(212, 86, 86, 0.508);
+  text-align: center;
+}
+
+.circle::after {
+  content: "";
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 2.3rem;
+  left: 2.3rem;
+  border: 2px solid rgba(18, 255, 172, 0.2);
+}
+
+.circle::before {
+  content: "";
+  width: 9rem;
+  height: 9rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 5.3rem;
+  left: 5.3rem;
+  border: 2px solid rgba(248, 132, 9, 0.5);
+}
+
+@media only screen and (max-width: 700px) {
+  .container {
+    width: 23rem;
+    height: 30rem;
+  }
+  .container .container_clock {
+    width: 23rem;
+  }
+  .hand {
+    height: 11%;
+  }
+  .hand.hand-minute {
+    height: 18%;
+  }
+  
+  .hand.hand-hour::after {
+    top: -1.25rem;
+  }
+
+  .hand.hand-minute::after {
+    top: -1.5rem;
+  }
+  .hand.hand-second {
+    height: 25%;
+  }
+  .hand.hand-second::after {
+    top: -1.6rem;
+  }
+  .circle {
+    width: 13rem;
+    height: 13rem;
+    top: 19%;
+    left: 21%;
+  }
+  .circle::after {
+    width: 10rem;
+    height: 10rem;
+    top: 9%;
+    left: 9%;
+  }
+  .circle::before {
+    width: 6rem;
+    height: 6rem;
+    top: 25%;
+    left: 25%;
+  }
+  .number {
+    font-size: 2rem;
+  }
+}

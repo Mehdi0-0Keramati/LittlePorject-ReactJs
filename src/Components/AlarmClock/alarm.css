@@ -1,0 +1,58 @@
+.AlarmClock_container {
+  margin: 2rem auto;
+  width: 30rem;
+  height: auto;
+  background: salmon;
+  padding: 0 2rem;
+  border-radius: 1rem;
+}
+.AlarmClock_container .alarm_title {
+  padding-top: 1rem;
+  color: brown;
+  text-align: center;
+  font-size: 2rem;
+  text-shadow: 0 0 0.2rem white, 0 0 0.3rem white, 0 0 1rem white;
+}
+.AlarmClock_container .ClockIcon {
+  display: block;
+  text-align: center;
+  font-size: 9rem;
+  padding-top: 2rem;
+}
+.AlarmClock_container .currentTime {
+  color: rgb(110, 36, 36);
+  font-family: impact;
+  margin-top: -3rem;
+  font-size: 2rem;
+  text-align: center;
+}
+.AlarmClock_container .select_container {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+}
+.AlarmClock_container .select_container select {
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: vazir;
+  flex-basis: 33%;
+  margin: 0 0.3rem;
+  padding: 0.8rem;
+  background: pink;
+  color: darkred;
+  border: 1px solid orangered;
+  border-radius: 0.3rem;
+}
+.AlarmClock_container .alarmButton {
+  width: 100%;
+  height: 3rem;
+  margin: 2rem 0;
+  color: white;
+  background: tomato;
+  border-radius: 0.2rem;
+}
+@media screen and (max-width: 700px) {
+  .AlarmClock_container {
+    width: 23rem;
+  }
+}
