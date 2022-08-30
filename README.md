@@ -1,1 +1,1 @@
-you cant see this repository on here => https://littleproject-reactjs.netlify.app
+you can see this repository on here => https://littleproject-reactjs.netlify.app
