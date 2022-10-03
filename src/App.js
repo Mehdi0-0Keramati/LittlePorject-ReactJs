@@ -6,7 +6,7 @@ import ReversTimer from "./Components/reverseTimer/ReversTimer";
 import StopWatch from "./Components/stopWatch/StopWatch";
 import Clock from "./Components/clock/Clock";
 import AlarmClock from "./Components/AlarmClock/AlarmClock";
-import TikTokToe from "./Components/TikTokToe/TikTokToe";
+import HidePassword from "./Components/HidePassword/HidePassword";
 import Calculator from "./Components/calculator/Calculator";
 
 const App = () => {
@@ -43,7 +43,7 @@ const App = () => {
       <StopWatch />
       <Clock />
       <AlarmClock />
-      <TikTokToe />
+      <HidePassword />
       <Calculator />
     </>
   );
